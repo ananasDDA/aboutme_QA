@@ -22,21 +22,20 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm ci
+          npm install gh-pages --save-dev
 
       - name: Build
         run: npm run build
 
-      - name: Create .nojekyll file
+      - name: Add .nojekyll file
         run: touch build/.nojekyll
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: build
-          branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
-          clean: true
-          clean-exclude: |
-            .nojekyll
-            CNAME
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          cname: ${{ secrets.CNAME }}
