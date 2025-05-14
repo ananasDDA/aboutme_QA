@@ -1,0 +1,174 @@
+.home-container {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  color: #09c;
+  margin-bottom: 20px;
+}
+
+.home-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.resume-downloads {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #09c;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #007b9e;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #09c;
+  border: 2px solid #09c;
+}
+
+.btn-secondary:hover {
+  background-color: #09c;
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #777;
+  border: 2px solid #777;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+}
+
+.btn-outline:hover {
+  background-color: #777;
+  color: white;
+}
+
+.home-social {
+  display: flex;
+  gap: 20px;
+}
+
+.home-social a {
+  color: #555;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.home-social a:hover {
+  color: #09c;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  color: #ddd;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .home-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-text {
+    margin-top: 40px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .home-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+  }
+
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+    font-size: 100px;
+  }
+
+  .resume-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}

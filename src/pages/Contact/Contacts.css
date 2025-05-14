@@ -1,0 +1,132 @@
+/* Стили для секции с телеграм-ботом */
+.telegram-bot-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.telegram-bot-intro {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.telegram-bot-card {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
+}
+
+.telegram-bot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 153, 204, 0.2);
+  border-color: #09c;
+}
+
+.telegram-bot-content {
+  display: flex;
+  align-items: center;
+}
+
+.telegram-bot-icon {
+  flex: 0 0 80px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f5f9ff;
+}
+
+.telegram-bot-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.telegram-bot-info {
+  flex: 1;
+}
+
+.telegram-bot-description {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.telegram-bot-name {
+  color: #09c;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+  .telegram-bot-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .telegram-bot-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+/* Дополнительные стили для секции с ботом */
+.bot-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.telegram-bot-icon i {
+  font-size: 50px;
+  color: #0088cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Обновленные стили для контейнера контактов */
+.contacts-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.telegram-bot-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .contacts-content {
+    flex-direction: column;
+  }
+}
+
+/* Стили для ссылок в контактах */
+.contact-item a {
+  color: #09c;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #007a9e;
+  text-decoration: underline;
+}

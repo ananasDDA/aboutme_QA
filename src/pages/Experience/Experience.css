@@ -1,0 +1,385 @@
+.experience-container {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background-color: #09c;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  left: -39px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #09c;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 2px #09c;
+}
+
+.timeline-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-header {
+  margin-bottom: 15px;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.job-company {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #09c;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.job-period {
+  font-size: 0.9rem;
+  color: #777;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.job-location, .job-category {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.job-location i, .job-category i {
+  margin-right: 5px;
+  color: #09c;
+}
+
+.job-responsibilities {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.job-responsibilities li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-marker {
+    left: -29px;
+  }
+
+  .job-title {
+    font-size: 1.2rem;
+  }
+
+  .job-company {
+    font-size: 1rem;
+  }
+}
+
+/* Стили для кнопки проектов */
+.projects-btn {
+  background-color: #09c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.projects-btn:hover {
+  background-color: #007a9e;
+}
+
+.projects-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 153, 204, 0.3);
+}
+
+/* Модальное окно */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-content h2 {
+  color: #09c;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.projects-list {
+  padding: 20px;
+}
+
+.project-item {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-item h3 {
+  color: #09c;
+  margin: 0 0 15px 0;
+  font-size: 1.25rem;
+}
+
+.project-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.project-description strong {
+  color: #333;
+}
+
+.project-description ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.project-description li {
+  margin-bottom: 8px;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tech-badge {
+  background-color: #f0f8ff;
+  color: #09c;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tech-badge:hover {
+  background-color: #09c;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Адаптивность для модальных окон */
+@media (max-width: 767px) {
+  .modal-content {
+    width: 95%;
+  }
+
+  .modal-content h2 {
+    padding: 15px;
+    font-size: 1.3rem;
+  }
+
+  .projects-list {
+    padding: 15px;
+  }
+
+  .tech-badge {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Стили для отображения платформ с эмодзи */
+.platforms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f5f9ff;
+  color: #09c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.platform-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0, 153, 204, 0.2);
+}
+
+.platform-emoji {
+  font-size: 1.2rem;
+  margin-right: 6px;
+}
+
+.platform-badge.highlighted {
+  background-color: #e5f5ff;
+  border: 1px solid #09c;
+}
+
+/* Стили для визуализации перехода от Android к iOS */
+.mobile-progression {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.platform-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.platform-emoji-large {
+  font-size: 2rem;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  margin: 0 15px;
+  color: #09c;
+  font-weight: bold;
+}
+
+.platform-caption {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Визуализация технологического стека */
+.tech-stack-visual {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.tech-item {
+  background: linear-gradient(135deg, #0099cc, #0077aa);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.tech-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
