@@ -34,7 +34,3 @@ jobs:
           branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
-          force: true
-          clean-exclude: |
-            .nojekyll
-            CNAME
